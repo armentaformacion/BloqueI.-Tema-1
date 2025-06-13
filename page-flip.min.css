@@ -1,0 +1,10 @@
+
+/*!
+ * page-flip 2.0.7
+ * Copyright 2021 StPageFlip
+ */
+.stf__wrapper{position:relative;overflow:hidden;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.stf__block{position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;pointer-events:none}
+.stf__page{position:absolute;top:0;left:0;transform-origin:left center;transform-style:preserve-3d;backface-visibility:hidden;pointer-events:auto;z-index:5}
+.stf__page-shadow{position:absolute;top:0;left:0;width:100%;height:100%;z-index:6;background:linear-gradient(to left,rgba(0,0,0,0.2),transparent)}
+.stf__outerShadow{position:absolute;top:0;left:0;width:100%;height:100%;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:4}
