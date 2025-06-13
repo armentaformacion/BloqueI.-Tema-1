@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Flipbook Tema 1</title>
   <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js" defer></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/css/page-flip.min.css">
+  <link rel="stylesheet" href="./page-flip.min.css">
   <style>
     body {
       margin: 0;
@@ -44,8 +44,8 @@
   <h2>Flipbook Tema 1</h2>
   <div id="flipbook"></div>
   <div id="controls">
-    <button onclick="pageFlip.flipPrev()">⏮ Anterior</button>
-    <button onclick="pageFlip.flipNext()">Siguiente ⏭</button>
+    <button onclick="goPrev()">⏮ Anterior</button>
+    <button onclick="goNext()">Siguiente ⏭</button>
     <label for="zoom-range">Zoom:</label>
     <input type="range" id="zoom-range" min="0.5" max="2" step="0.1" value="1" onchange="setZoom(this.value)">
     <button onclick="window.location.href='https://moodle.armentaformacion.com'">Volver al curso</button>
@@ -53,6 +53,14 @@
 
   <script>
     let pageFlip;
+
+    function goPrev() {
+      if (pageFlip) pageFlip.flipPrev();
+    }
+
+    function goNext() {
+      if (pageFlip) pageFlip.flipNext();
+    }
 
     function setZoom(zoomLevel) {
       const flipbook = document.getElementById("flipbook");
