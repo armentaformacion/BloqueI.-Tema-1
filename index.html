@@ -8,38 +8,64 @@
   <style>
     body {
       margin: 0;
-      background: #ccc;
+      background: #e2e2e2;
+      font-family: sans-serif;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
     }
     #flipbook {
+      margin-top: 10px;
       width: 90vw;
-      height: 90vh;
+      height: 85vh;
+    }
+    #controls {
+      margin-top: 10px;
+    }
+    button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      background: #0058a3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #003f7f;
+    }
+    #zoom-range {
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
+  <h2>Flipbook Tema 1</h2>
   <div id="flipbook"></div>
+  <div id="controls">
+    <button onclick="pageFlip.flipPrev()">⏮ Anterior</button>
+    <button onclick="pageFlip.flipNext()">Siguiente ⏭</button>
+    <label for="zoom-range">Zoom:</label>
+    <input type="range" id="zoom-range" min="0.5" max="2" step="0.1" value="1" onchange="setZoom(this.value)">
+    <button onclick="window.location.href='https://moodle.armentaformacion.com'">Volver al curso</button>
+  </div>
   <script>
     const pageFlip = new St.PageFlip(document.getElementById("flipbook"), {
       width: 600,
       height: 800,
       size: "stretch",
       minWidth: 315,
-      maxWidth: 1000,
+      maxWidth: 1200,
       minHeight: 400,
-      maxHeight: 1536,
+      maxHeight: 1600,
       showCover: false,
-      mobileScrollSupport: false,
-      maxShadowOpacity: 0.5,
+      mobileScrollSupport: true,
       useMouseEvents: true,
-      startPage: 0,
-      swipeDistance: 30,
       flippingTime: 700,
       showPageCorners: true
     });
+
     pageFlip.loadFromImages([
       './flipbook_tema1_pages/page_001.png',
       './flipbook_tema1_pages/page_002.png',
@@ -87,6 +113,12 @@
       './flipbook_tema1_pages/page_044.png',
       './flipbook_tema1_pages/page_045.png'
     ]);
+
+    function setZoom(zoomLevel) {
+      const flipbook = document.getElementById("flipbook");
+      flipbook.style.transform = `scale(${zoomLevel})`;
+      flipbook.style.transformOrigin = "top center";
+    }
   </script>
 </body>
 </html>
