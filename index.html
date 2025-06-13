@@ -13,14 +13,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow-y: auto; /* 🔧 permitir scroll */
     }
     #flipbook {
       margin-top: 10px;
       width: 90vw;
-      height: 75vh; /* Altura reducida */
+      height: 70vh; /* 🔧 menor altura para dejar espacio */
+      position: relative;
+      z-index: 1;
     }
     #controls {
       margin-top: 10px;
+      position: relative; /* 🔧 asegurar que se muestre encima */
+      z-index: 10;
     }
     button {
       margin: 0 5px;
