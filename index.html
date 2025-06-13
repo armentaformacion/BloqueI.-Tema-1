@@ -5,46 +5,46 @@
   <title>Flipbook Tema 1</title>
   <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js" defer></script>
   <link rel="stylesheet" href="./page-flip.min.css">
-  <style>
-    body {
-      margin: 0;
-      background: #e2e2e2;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-y: auto; /* 🔧 permitir scroll */
-    }
-    #flipbook {
-      margin-top: 10px;
-      width: 90vw;
-      height: 70vh; /* 🔧 menor altura para dejar espacio */
-      position: relative;
-      z-index: 1;
-    }
-    #controls {
-      margin-top: 10px;
-      position: relative; /* 🔧 asegurar que se muestre encima */
-      z-index: 10;
-    }
-    button {
-      margin: 0 5px;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      background: #0058a3;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #003f7f;
-    }
-    #zoom-range {
-      vertical-align: middle;
-    }
-  </style>
 </head>
+<style>
+  body {
+    margin: 0;
+    background: #e2e2e2;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+  #flipbook {
+    margin-top: 10px;
+    width: 90vw;
+    height: 70vh;
+    position: relative;
+    z-index: 1;
+  }
+  #controls {
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #0058a3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #003f7f;
+  }
+  #zoom-range {
+    vertical-align: middle;
+  }
+</style>
 <body>
   <h2>Flipbook Tema 1</h2>
   <div id="flipbook"></div>
