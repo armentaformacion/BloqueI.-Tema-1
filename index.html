@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipbook Tema 1</title>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip/dist/css/page-flip.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #flipbook {
+      width: 90vw;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook"></div>
+  <script>
+    const pageFlip = new St.PageFlip(document.getElementById("flipbook"), {
+      width: 600,
+      height: 800,
+      size: "stretch",
+      minWidth: 315,
+      maxWidth: 1000,
+      minHeight: 400,
+      maxHeight: 1536,
+      showCover: false,
+      mobileScrollSupport: false,
+      maxShadowOpacity: 0.5,
+      useMouseEvents: true,
+      startPage: 0,
+      swipeDistance: 30,
+      flippingTime: 700,
+      showPageCorners: true
+    });
+    pageFlip.loadFromImages([
+      'flipbook_tema1_pages/page_001.png',
+      'flipbook_tema1_pages/page_002.png',
+      'flipbook_tema1_pages/page_003.png',
+      'flipbook_tema1_pages/page_004.png',
+      'flipbook_tema1_pages/page_005.png',
+      'flipbook_tema1_pages/page_006.png',
+      'flipbook_tema1_pages/page_007.png',
+      'flipbook_tema1_pages/page_008.png',
+      'flipbook_tema1_pages/page_009.png',
+      'flipbook_tema1_pages/page_010.png',
+      'flipbook_tema1_pages/page_011.png',
+      'flipbook_tema1_pages/page_012.png',
+      'flipbook_tema1_pages/page_013.png',
+      'flipbook_tema1_pages/page_014.png',
+      'flipbook_tema1_pages/page_015.png',
+      'flipbook_tema1_pages/page_016.png',
+      'flipbook_tema1_pages/page_017.png',
+      'flipbook_tema1_pages/page_018.png',
+      'flipbook_tema1_pages/page_019.png',
+      'flipbook_tema1_pages/page_020.png',
+      'flipbook_tema1_pages/page_021.png',
+      'flipbook_tema1_pages/page_022.png',
+      'flipbook_tema1_pages/page_023.png',
+      'flipbook_tema1_pages/page_024.png',
+      'flipbook_tema1_pages/page_025.png',
+      'flipbook_tema1_pages/page_026.png',
+      'flipbook_tema1_pages/page_027.png',
+      'flipbook_tema1_pages/page_028.png',
+      'flipbook_tema1_pages/page_029.png',
+      'flipbook_tema1_pages/page_030.png',
+      'flipbook_tema1_pages/page_031.png',
+      'flipbook_tema1_pages/page_032.png',
+      'flipbook_tema1_pages/page_033.png',
+      'flipbook_tema1_pages/page_034.png',
+      'flipbook_tema1_pages/page_035.png',
+      'flipbook_tema1_pages/page_036.png',
+      'flipbook_tema1_pages/page_037.png',
+      'flipbook_tema1_pages/page_038.png',
+      'flipbook_tema1_pages/page_039.png',
+      'flipbook_tema1_pages/page_040.png',
+      'flipbook_tema1_pages/page_041.png',
+      'flipbook_tema1_pages/page_042.png',
+      'flipbook_tema1_pages/page_043.png',
+      'flipbook_tema1_pages/page_044.png',
+      'flipbook_tema1_pages/page_045.png'
+    ]);
+  </script>
+</body>
+</html>
